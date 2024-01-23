@@ -1,0 +1,14 @@
+1 instalar node js
+
+2 instalar typescript 
+npm install -g typescript
+
+3  verificar version de ts 
+tsc --version
+
+4 Dar permisos de ejecucion en power shell 
+Set-ExecutionPolicy RemoteSigned -Force
+
+
+5 abrir la terminal y compilar el archivo de typescript en una carpeta 
+tsc main.ts -outDir scripts

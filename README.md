@@ -1,1 +1,1 @@
-# Fundamentos-Typescript
+# Typescript proyecto

@@ -12,3 +12,20 @@ Set-ExecutionPolicy RemoteSigned -Force
 
 5 abrir la terminal y compilar el archivo de typescript en una carpeta 
 tsc main.ts -outDir scripts
+
+6- Es necesario configurar el versionamiento de typescript creando un fichero config.json
+
+{
+"compilerOptions": {
+    "target": "es5",
+    "module": "es6",
+    "outDir": "./dist",
+    "rootDir": "./",
+    "strict": true,
+    "alwaysStrict": true
+}
+}
+
+
+7- Ejecutar comando
+tsc -p tsconfig.json

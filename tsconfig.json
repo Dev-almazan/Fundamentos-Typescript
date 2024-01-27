@@ -1,0 +1,17 @@
+
+{
+"compilerOptions": {
+    "target": "es5",
+    "module": "es6",
+    "outDir": "./js",
+    "rootDir": "./ts",
+    "strict": true,
+    "alwaysStrict": true
+}
+}
+
+
+/*
+tsc -p tsconfig.json
+inicio de dir usuario.ts
+*/

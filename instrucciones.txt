@@ -29,3 +29,4 @@ tsc main.ts -outDir scripts
 
 7- Ejecutar comando
 tsc -p tsconfig.json
+

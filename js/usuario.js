@@ -15,7 +15,7 @@ var usuario = /** @class */ (function () {
         this.nivelEducativo = nivelEducativo;
         this.cursosUsuario = cursosUsuario;
     }
-    /*Funciones adicionales */
+    /*Funciones */
     usuario.prototype.numeroDeCursosAprobados = function (valor) {
         if (valor.length > 0) {
             return valor.filter(function (dato) { return dato.certificado == "si"; }).length;

@@ -2,7 +2,17 @@
 import { usuario,niveles } from "./usuario.js";
 import { Cursos } from "./cursos.js";
 
-const data = new usuario("Ernesto", "Almazan", "perfil.jpeg", "Desarrollador Web", 27, niveles.LIC, [new Cursos("React JS", "Coder House", "Curso desarrollo web front end", "si", 2022), new Cursos("Front End", "Bedu tech", "Curso desarrollo web front end", "si", 2020)]);
+export let cursos:any = [
+    new Cursos("React JS", "Coder House", "Curso desarrollo web front end", "si", 2022),
+    new Cursos("Front End", "Bedu tech", "Curso desarrollo web front end", "si", 2020),
+    new Cursos("Java", "Platzi", "Curso desarrollo de aplicaciones móviles", "si", 2021),
+    new Cursos("Python", "Udemy", "Curso aprendizaje automático", "si", 2023),
+    new Cursos("C++", "Coursera", "Curso programación de sistemas", "no", 2021),
+    new Cursos("SQL", "EdX", "Curso bases de datos relacionales", "no", 2022),
+    new Cursos("HTML y CSS", "Khan Academy", "Curso fundamentos de desarrollo web", "si", 2020)
+];
+
+const data = new usuario("Ernesto", "Almazan", "perfil.jpeg", "Desarrollador Web", 27, niveles.LIC,cursos);
 
 let cursosAprobados:number = data.numeroDeCursosAprobados(data.cursosUsuario);
 

@@ -14,7 +14,7 @@ export enum niveles {
 
 export class usuario
 {
-    constructor(public nombre: string, public apellidos: string, public avatar: string, public profesion: string, public edad: number, public nivelEducativo: niveles, public cursosUsuario:Cursos[])
+    constructor(public nombre: string, public apellidos: string, public avatar: string, public profesion: string, public gitProfile: string, public liProfile: string, public edad: number, public nivelEducativo: niveles, public cursosUsuario:Cursos[])
     {
     }
         

@@ -6,11 +6,13 @@ export var niveles;
     niveles["POSGRADOS"] = "Posgrados";
 })(niveles || (niveles = {}));
 var usuario = /** @class */ (function () {
-    function usuario(nombre, apellidos, avatar, profesion, edad, nivelEducativo, cursosUsuario) {
+    function usuario(nombre, apellidos, avatar, profesion, gitProfile, liProfile, edad, nivelEducativo, cursosUsuario) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.avatar = avatar;
         this.profesion = profesion;
+        this.gitProfile = gitProfile;
+        this.liProfile = liProfile;
         this.edad = edad;
         this.nivelEducativo = nivelEducativo;
         this.cursosUsuario = cursosUsuario;

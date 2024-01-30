@@ -45,7 +45,7 @@ function ASignarUsuarios(data :usuario):void
 function AsignarCursos(data:Cursos[]):void
 {
         data.forEach(element => {
-            cursoSec.innerHTML += `<div class="card text-center mb-4">
+            cursoSec.innerHTML += `<div class="card text-center mb-4 cursoSe" data-plan="${element.nombre} ${element.escuela} ${element.descripcion} ${element.periodo}">
                             <div class="card-header">${element.nombre} </div>
                             <div class="card-body">
                                 <h5 class="card-title"><strong>${element.escuela}</strong></h5>
@@ -60,6 +60,37 @@ function AsignarCursos(data:Cursos[]):void
             
         });
 }
+
+            const buscador: HTMLElement = document.getElementById("buscador")!;
+            const alerta: HTMLElement = document.getElementById("alerta")!;
+
+            buscador.addEventListener("keyup", (event: any) => {
+                const stringBuscador = event.target.value.toUpperCase();
+
+                document.querySelectorAll('.cursoSe').forEach((div:any) => {
+                    const dataPlan:any = div.getAttribute("data-plan")?.toUpperCase(); // Handle potential undefined data-plan
+                    const busqueda:any = dataPlan?.indexOf(stringBuscador);
+
+                    if (busqueda >= 0) {
+                        div.style.display = "";
+                    } else {
+                        div.style.display = "none";
+                    }
+                });
+
+                let arrayBusquedas:any = [];
+                const found:boolean = arrayBusquedas.find((element:any) => element >= 0);
+
+                if (found === undefined) {
+                    alerta.style.display = "";
+                    console.log(found)
+                }
+                else {
+                    alerta.style.display = "none";
+                }
+
+                arrayBusquedas = [];    
+            });
 
 ASignarUsuarios(data);
 AsignarCursos(data.cursosUsuario);

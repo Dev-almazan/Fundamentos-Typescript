@@ -18,8 +18,34 @@ function ASignarUsuarios(data) {
 }
 function AsignarCursos(data) {
     data.forEach(function (element) {
-        cursoSec.innerHTML += "<div class=\"card text-center mb-4\">\n                            <div class=\"card-header\">".concat(element.nombre, " </div>\n                            <div class=\"card-body\">\n                                <h5 class=\"card-title\"><strong>").concat(element.escuela, "</strong></h5>\n                                <p class=\"card-text\">").concat(element.descripcion, "</p>\n                               <a href=\"").concat(element.certUrl, "\" target=\"_blank\" class=\"btn btn-primary\"  ").concat(element.certificado !== 'si' ? 'style="display: none;"' : '', "><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-bookmark-check\" viewBox=\"0 0 16 16\">\n                                <path fill-rule=\"evenodd\" d=\"M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0\"/>\n                                <path d=\"M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z\"/>\n                                </svg> Ver certificado</a>\n                            </div>\n                            <div class=\"card-footer text-muted\">Finalizado en: ").concat(element.periodo, "</div>\n                        </div>");
+        cursoSec.innerHTML += "<div class=\"card text-center mb-4 cursoSe\" data-plan=\"".concat(element.nombre, " ").concat(element.escuela, " ").concat(element.descripcion, " ").concat(element.periodo, "\">\n                            <div class=\"card-header\">").concat(element.nombre, " </div>\n                            <div class=\"card-body\">\n                                <h5 class=\"card-title\"><strong>").concat(element.escuela, "</strong></h5>\n                                <p class=\"card-text\">").concat(element.descripcion, "</p>\n                               <a href=\"").concat(element.certUrl, "\" target=\"_blank\" class=\"btn btn-primary\"  ").concat(element.certificado !== 'si' ? 'style="display: none;"' : '', "><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-bookmark-check\" viewBox=\"0 0 16 16\">\n                                <path fill-rule=\"evenodd\" d=\"M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0\"/>\n                                <path d=\"M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z\"/>\n                                </svg> Ver certificado</a>\n                            </div>\n                            <div class=\"card-footer text-muted\">Finalizado en: ").concat(element.periodo, "</div>\n                        </div>");
     });
 }
+var buscador = document.getElementById("buscador");
+var alerta = document.getElementById("alerta");
+buscador.addEventListener("keyup", function (event) {
+    var stringBuscador = event.target.value.toUpperCase();
+    document.querySelectorAll('.cursoSe').forEach(function (div) {
+        var _a;
+        var dataPlan = (_a = div.getAttribute("data-plan")) === null || _a === void 0 ? void 0 : _a.toUpperCase(); // Handle potential undefined data-plan
+        var busqueda = dataPlan === null || dataPlan === void 0 ? void 0 : dataPlan.indexOf(stringBuscador);
+        if (busqueda >= 0) {
+            div.style.display = "";
+        }
+        else {
+            div.style.display = "none";
+        }
+    });
+    var arrayBusquedas = [];
+    var found = arrayBusquedas.find(function (element) { return element >= 0; });
+    if (found === undefined) {
+        alerta.style.display = "";
+        console.log(found);
+    }
+    else {
+        alerta.style.display = "none";
+    }
+    arrayBusquedas = [];
+});
 ASignarUsuarios(data);
 AsignarCursos(data.cursosUsuario);

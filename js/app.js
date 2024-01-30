@@ -18,7 +18,7 @@ function ASignarUsuarios(data) {
 }
 function AsignarCursos(data) {
     data.forEach(function (element) {
-        cursoSec.innerHTML += "<div class=\"card text-center mb-4\">\n                            <div class=\"card-header\">".concat(element.nombre, " </div>\n                            <div class=\"card-body\">\n                                <h5 class=\"card-title\"><strong>").concat(element.escuela, "</strong></h5>\n                                <p class=\"card-text\">").concat(element.descripcion, "</p>\n                               <a href=\"").concat(element.certUrl, "\" target=\"_blank\" class=\"btn btn-primary\"  ").concat(element.certificado !== 'si' ? 'style="display: none;"' : '', ">Ver certificado</a>\n                            </div>\n                            <div class=\"card-footer text-muted\">").concat(element.periodo, "</div>\n                        </div>");
+        cursoSec.innerHTML += "<div class=\"card text-center mb-4\">\n                            <div class=\"card-header\">".concat(element.nombre, " </div>\n                            <div class=\"card-body\">\n                                <h5 class=\"card-title\"><strong>").concat(element.escuela, "</strong></h5>\n                                <p class=\"card-text\">").concat(element.descripcion, "</p>\n                               <a href=\"").concat(element.certUrl, "\" target=\"_blank\" class=\"btn btn-primary\"  ").concat(element.certificado !== 'si' ? 'style="display: none;"' : '', ">Ver certificado</a>\n                            </div>\n                            <div class=\"card-footer text-muted\">Finalizado en: ").concat(element.periodo, "</div>\n                        </div>");
     });
 }
 ASignarUsuarios(data);

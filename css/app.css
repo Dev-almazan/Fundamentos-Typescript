@@ -67,6 +67,11 @@ section.inicio
     max-width: 85% !important;
     margin: 2% auto !important;
 }
+.input-group
+{
+    width: 60% !important;
+    margin:  0 auto;
+}
 .btn-group
 { 
     background-color: #386bc0 !important;
@@ -95,13 +100,33 @@ section.inicio
 @media only screen and (max-width: 1600px) {
 
 section.inicio{
-            max-width:75%;
+            max-width:80%;
 
         }
 .cursos {
-        max-height: 34rem;
+        max-height: 30rem;
       
     }
+
+        .card-Perfil {
+            width: 75% !important;
+            margin: 0 auto;
+        }
+    
+        #SecCursos {
+            padding: 2% 5%;
+            box-sizing: border-box;
+        }
+    
+        #SecCursos .card {
+            max-width: 82% !important;
+            margin: 2.5% auto !important;
+        }
+    
+        .input-group {
+            width: 50% !important;
+            margin: 0 auto;
+        }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -112,6 +137,28 @@ section.inicio {
         max-width: 95%;
     }
     .cursos {
-        max-height: 16rem;
+        max-height: 28rem;
     }
+
+
+                .card-Perfil {
+                    width: 80% !important;
+                    margin: 0 auto;
+                }
+        
+                #SecCursos {
+                    padding: 2% 5%;
+                    box-sizing: border-box;
+                }
+        
+                #SecCursos .card {
+                    max-width: 100% !important;
+                    margin: 5.5% auto !important;
+                }
+        
+                .input-group {
+                    width: 70% !important;
+                    margin: 0 auto;
+                }
+
 }

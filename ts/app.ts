@@ -48,12 +48,11 @@ function AsignarCursos(data:Cursos[]):void
                                 <p class="card-text">${element.descripcion}</p>
                                <a href="${element.certUrl}" target="_blank" class="btn btn-primary"  ${element.certificado !== 'si' ? 'style="display: none;"' : ''}>Ver certificado</a>
                             </div>
-                            <div class="card-footer text-muted">${element.periodo}</div>
+                            <div class="card-footer text-muted">Finalizado en: ${element.periodo}</div>
                         </div>`;
             
         });
 }
 
 ASignarUsuarios(data);
-
 AsignarCursos(data.cursosUsuario);

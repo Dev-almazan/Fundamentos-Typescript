@@ -134,7 +134,7 @@ body {
     height: auto;
     }
 section.inicio {
-        max-width: 95%;
+        max-width: 100%;
     }
     .cursos {
         max-height: 28rem;

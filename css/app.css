@@ -1,6 +1,7 @@
 
 body
 {
+    grid-template-columns: repeat(3, 200px);
     display: flex;
     align-items: center !important;
     align-content: center !important;
@@ -17,6 +18,62 @@ section.inicio
  
 }
 
+#tarjeta
+{
+    align-items: center;
+    display: grid;
+    height: auto;
+}
+
+.card-Perfil
+{
+    width: 70% !important;
+    margin:  0 auto;
+}
+#tarjeta .card-title
+{
+    font-size: 1.1em;
+    font-weight: 400 ;
+    line-height: 30px;
+    text-align: center;
+}
+
+#tarjeta .card-subtitle {
+    font-size: 1.1em;
+    font-weight: 400 !important;
+    text-align: center; 
+    line-height: 30px;
+}
+
+#tarjeta .card-text {
+    font-size: 1em;
+    font-weight: 500;
+    color: #386bc0;
+    line-height: 30px;
+    text-align: center;
+    font-weight: 400;
+}
+#tarjeta .card-footer {
+    margin: 0 auto;
+    display: grid;
+}
+
+#SecCursos 
+{
+    padding: 2% 5%;
+    box-sizing: border-box;
+}
+#SecCursos .card {
+    max-width: 85% !important;
+    margin: 2% auto !important;
+}
+.btn-group
+{ 
+    background-color: #386bc0 !important;
+    margin:  0 auto; 
+    justify-content: center !important;
+    display: flex !important;
+}
 
 .cursos
 {
@@ -24,6 +81,16 @@ section.inicio
     max-height: 40rem;
     overflow-y: scroll;
 }
+.img-pf
+{
+    margin:  0 auto;
+    width: 80% !important;
+    height: auto;
+    margin-top: 6%;
+    box-sizing: border-box;
+    border-radius: 1.6%;
+}
+
 
 @media only screen and (max-width: 1600px) {
 
